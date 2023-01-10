@@ -28,16 +28,61 @@ F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')'
 
 ## Logic Diagram
 ## Procedure
-## Program:
+## Program1:
+```
+module saisai(a,b,c,d,f);
+input a,b,c,d;
+output f;
+wire f1,f2,f3;
+assign f1 = (~c&~b&~a);
+assign f2 = (~d&~c&~a);
+assign f3 = (c&~(~b)&~a);
+assign f= f1&~f2&~f3;
+endmodule
+```
+## program2;
+
+module sai2(a,b,c,d,f);
+input a,b,c,d;
+output f;
+wire f1,f2,f3,f4;
+assign f1 = c&(~b)&a;
+assign f2 = d&(~c)&a;
+assign f3 = c&(~b)&a;
+assign f4 = ~(f1|f2|f3);
+not(f,f4);
+endmodule
+
 /*
 Program to implement the given logic function using NAND and NOR gates and to verify its operations in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: karthick P
+RegisterNumber:  22000995
 */
 ## RTL realization
+## 1
+![image](./rtl1.png)
 
-## Output:
+## 2
+![image](./rtl2.png)
+
+## truth table
+
+## 1
+![image](./tr1.png)
+
+## 2
+![image](./tr2.png)
+
+
 ## RTL
-## Timing Diagram
+
+## 1
+![image](./rtl21.png)
+
+## 2
+
+![image](./rtl22.png)
+
+
 ## Result:
 Thus the given logic functions are implemented using NAND and NOR gates and their operations are verified using Verilog programming.
